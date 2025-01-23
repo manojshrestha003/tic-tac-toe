@@ -1,0 +1,82 @@
+body {
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,56,111,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 0 auto;
+  }
+
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background 0.3s;
+  }
+
+  .cell:hover {
+    transform: scale(1.1);
+    background: #dff6ff;
+  }
+
+  .cell.taken {
+    pointer-events: none;
+  }
+
+  .winner {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    animation: pop 1s infinite alternate;
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #3004f1;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
